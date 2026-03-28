@@ -1,0 +1,680 @@
+{
+  "company": "TechVenture Italia Srl",
+  "extraction_date": "2026-03-28",
+  "total_contracts": 16,
+  "total_revenue": 4594080,
+  "contracts": [
+    {
+      "id": "CTR-001",
+      "client": "Acme SpA",
+      "client_sector": "Manufacturing",
+      "type": "SaaS Enterprise",
+      "product": "CloudERP Pro",
+      "category": "Software",
+      "value_annual": 450000,
+      "total_value": 1350000,
+      "currency": "EUR",
+      "start_date": "2024-04-15",
+      "end_date": "2026-04-15",
+      "duration_months": 24,
+      "auto_renewal": false,
+      "discount_percent": 10,
+      "standard_discount": 12,
+      "payment_terms_days": 30,
+      "status": "active",
+      "risk_score": 7,
+      "sla": {
+        "uptime": "99.9%",
+        "response_time_hours": 4,
+        "penalty_percent": 5
+      },
+      "clauses": [
+        {
+          "type": "SLA Penalty",
+          "description": "Penale del 5% sul canone mensile per ogni ora di downtime oltre le 4 ore cumulative mensili",
+          "risk_level": "high",
+          "risk_area": "financial"
+        },
+        {
+          "type": "Data Residency",
+          "description": "I dati devono risiedere esclusivamente su server localizzati in territorio UE",
+          "risk_level": "medium",
+          "risk_area": "legal"
+        }
+      ],
+      "notes": "Cliente strategico. Contratto in scadenza tra 19 giorni. Necessario avviare negoziazione rinnovo."
+    },
+    {
+      "id": "CTR-002",
+      "client": "Beta Srl",
+      "client_sector": "Retail",
+      "type": "Fornitura Hardware",
+      "product": "Server & Networking",
+      "category": "Hardware",
+      "value_annual": 280000,
+      "total_value": 280000,
+      "currency": "EUR",
+      "start_date": "2025-06-01",
+      "end_date": "2026-05-31",
+      "duration_months": 12,
+      "auto_renewal": false,
+      "discount_percent": 35,
+      "standard_discount": 12,
+      "payment_terms_days": 60,
+      "status": "active",
+      "risk_score": 6,
+      "sla": null,
+      "clauses": [
+        {
+          "type": "Sconto Non Standard",
+          "description": "Sconto del 35% applicato rispetto al listino standard, ben oltre la media aziendale del 12%",
+          "risk_level": "high",
+          "risk_area": "financial"
+        },
+        {
+          "type": "Termini di Pagamento Estesi",
+          "description": "Pagamento a 60 giorni rispetto allo standard di 30 giorni",
+          "risk_level": "medium",
+          "risk_area": "financial"
+        }
+      ],
+      "notes": "Sconto anomalo concesso dal precedente account manager. Da rinegoziare al rinnovo."
+    },
+    {
+      "id": "CTR-003",
+      "client": "Gamma Industries",
+      "client_sector": "Automotive",
+      "type": "Consulenza Strategica",
+      "product": "Digital Transformation",
+      "category": "Consulting",
+      "value_annual": 600000,
+      "total_value": 1200000,
+      "currency": "EUR",
+      "start_date": "2025-01-01",
+      "end_date": "2026-12-31",
+      "duration_months": 24,
+      "auto_renewal": true,
+      "discount_percent": 8,
+      "standard_discount": 12,
+      "payment_terms_days": 30,
+      "status": "active",
+      "risk_score": 3,
+      "sla": {
+        "uptime": null,
+        "response_time_hours": 24,
+        "penalty_percent": 2
+      },
+      "clauses": [
+        {
+          "type": "Rinnovo Automatico",
+          "description": "Il contratto si rinnova automaticamente per 12 mesi salvo disdetta con 90 giorni di preavviso",
+          "risk_level": "low",
+          "risk_area": "operational"
+        }
+      ],
+      "notes": "Cliente top, relazione pluriennale. Secondo contratto attivo (vedi CTR-004)."
+    },
+    {
+      "id": "CTR-004",
+      "client": "Gamma Industries",
+      "client_sector": "Automotive",
+      "type": "Licenze Software",
+      "product": "AnalyticsPro Suite",
+      "category": "Software",
+      "value_annual": 180000,
+      "total_value": 540000,
+      "currency": "EUR",
+      "start_date": "2024-07-01",
+      "end_date": "2027-06-30",
+      "duration_months": 36,
+      "auto_renewal": true,
+      "discount_percent": 15,
+      "standard_discount": 12,
+      "payment_terms_days": 30,
+      "status": "active",
+      "risk_score": 2,
+      "sla": {
+        "uptime": "99.5%",
+        "response_time_hours": 8,
+        "penalty_percent": 1
+      },
+      "clauses": [
+        {
+          "type": "Volume Discount",
+          "description": "Sconto del 15% legato all'acquisto combinato con il contratto di consulenza CTR-003",
+          "risk_level": "low",
+          "risk_area": "financial"
+        }
+      ],
+      "notes": "Bundled con CTR-003. Sconto leggermente sopra standard ma giustificato da volume."
+    },
+    {
+      "id": "CTR-005",
+      "client": "Delta Corp",
+      "client_sector": "Finance",
+      "type": "Licenze Software",
+      "product": "SecureVault Platform",
+      "category": "Software",
+      "value_annual": 200000,
+      "total_value": 400000,
+      "currency": "EUR",
+      "start_date": "2025-01-01",
+      "end_date": "2026-12-31",
+      "duration_months": 24,
+      "auto_renewal": false,
+      "discount_percent": 42,
+      "standard_discount": 12,
+      "payment_terms_days": 45,
+      "status": "active",
+      "risk_score": 8,
+      "sla": {
+        "uptime": "99.99%",
+        "response_time_hours": 1,
+        "penalty_percent": 8
+      },
+      "clauses": [
+        {
+          "type": "Sconto Critico",
+          "description": "Sconto del 42% sul listino, il più alto in portafoglio. Margine operativo quasi azzerato",
+          "risk_level": "critical",
+          "risk_area": "financial"
+        },
+        {
+          "type": "SLA Estremo",
+          "description": "SLA al 99.99% con penale dell'8% per ogni 0.01% di downtime. Rischio finanziario elevato",
+          "risk_level": "critical",
+          "risk_area": "financial"
+        },
+        {
+          "type": "Audit Rights",
+          "description": "Il cliente ha diritto a 2 audit annuali senza preavviso sui sistemi e processi del fornitore",
+          "risk_level": "high",
+          "risk_area": "operational"
+        }
+      ],
+      "notes": "ALERT: Sconto outlier al 42%. SLA al 99.99% con penali pesanti. Rivedere margini urgentemente."
+    },
+    {
+      "id": "CTR-006",
+      "client": "Epsilon Tech",
+      "client_sector": "Technology",
+      "type": "Manutenzione",
+      "product": "Server Maintenance",
+      "category": "Services",
+      "value_annual": 150000,
+      "total_value": 300000,
+      "currency": "EUR",
+      "start_date": "2024-03-01",
+      "end_date": "2026-02-28",
+      "duration_months": 24,
+      "auto_renewal": false,
+      "discount_percent": 5,
+      "standard_discount": 12,
+      "payment_terms_days": 30,
+      "status": "expired",
+      "risk_score": 9,
+      "sla": {
+        "uptime": null,
+        "response_time_hours": 2,
+        "penalty_percent": 3
+      },
+      "clauses": [
+        {
+          "type": "Esclusiva Territoriale",
+          "description": "Clausola di esclusiva sul territorio del Nord Italia per servizi di manutenzione hardware",
+          "risk_level": "high",
+          "risk_area": "legal"
+        },
+        {
+          "type": "Non-Compete",
+          "description": "Divieto di fornire servizi analoghi ai competitor diretti di Epsilon per 12 mesi post-contratto",
+          "risk_level": "high",
+          "risk_area": "legal"
+        }
+      ],
+      "notes": "⚠️ CONTRATTO SCADUTO il 28/02/2026. Il cliente continua a richiedere servizi. Urgente formalizzare rinnovo o chiusura."
+    },
+    {
+      "id": "CTR-007",
+      "client": "Zeta Digital",
+      "client_sector": "Media",
+      "type": "Cloud Services",
+      "product": "CloudScale Infrastructure",
+      "category": "Cloud",
+      "value_annual": 380000,
+      "total_value": 760000,
+      "currency": "EUR",
+      "start_date": "2025-04-01",
+      "end_date": "2026-09-30",
+      "duration_months": 18,
+      "auto_renewal": false,
+      "discount_percent": 18,
+      "standard_discount": 12,
+      "payment_terms_days": 30,
+      "status": "active",
+      "risk_score": 7,
+      "sla": {
+        "uptime": "99.95%",
+        "response_time_hours": 2,
+        "penalty_percent": 4
+      },
+      "clauses": [
+        {
+          "type": "Clausola di Esclusiva",
+          "description": "Il fornitore non può offrire servizi cloud analoghi ad altre aziende media nel territorio italiano",
+          "risk_level": "critical",
+          "risk_area": "legal"
+        },
+        {
+          "type": "Lock-in Tecnologico",
+          "description": "Migrazione obbligatoria su stack proprietario con costi di uscita pari al 25% del valore contrattuale",
+          "risk_level": "high",
+          "risk_area": "operational"
+        }
+      ],
+      "notes": "Clausola di esclusiva molto restrittiva. Il lock-in tecnologico limita la flessibilità futura."
+    },
+    {
+      "id": "CTR-008",
+      "client": "Eta Group",
+      "client_sector": "Education",
+      "type": "Formazione",
+      "product": "Academy Digital Skills",
+      "category": "Training",
+      "value_annual": 90000,
+      "total_value": 90000,
+      "currency": "EUR",
+      "start_date": "2026-01-15",
+      "end_date": "2027-01-14",
+      "duration_months": 12,
+      "auto_renewal": true,
+      "discount_percent": 20,
+      "standard_discount": 12,
+      "payment_terms_days": 60,
+      "status": "active",
+      "risk_score": 4,
+      "sla": null,
+      "clauses": [
+        {
+          "type": "Rinnovo Automatico",
+          "description": "Rinnovo automatico annuale salvo disdetta con 60 giorni di anticipo",
+          "risk_level": "low",
+          "risk_area": "operational"
+        },
+        {
+          "type": "Proprietà Intellettuale",
+          "description": "I materiali formativi prodotti restano di proprietà esclusiva del fornitore",
+          "risk_level": "low",
+          "risk_area": "legal"
+        }
+      ],
+      "notes": "Contratto a basso rischio con rinnovo automatico. Sconto leggermente elevato."
+    },
+    {
+      "id": "CTR-009",
+      "client": "Theta Solutions",
+      "client_sector": "Consulting",
+      "type": "Outsourcing IT",
+      "product": "Managed IT Services",
+      "category": "Services",
+      "value_annual": 520000,
+      "total_value": 1560000,
+      "currency": "EUR",
+      "start_date": "2024-11-01",
+      "end_date": "2026-11-30",
+      "duration_months": 36,
+      "auto_renewal": false,
+      "discount_percent": 12,
+      "standard_discount": 12,
+      "payment_terms_days": 30,
+      "status": "active",
+      "risk_score": 6,
+      "sla": {
+        "uptime": "99.9%",
+        "response_time_hours": 4,
+        "penalty_percent": 3
+      },
+      "clauses": [
+        {
+          "type": "Penale di Rescissione",
+          "description": "In caso di rescissione anticipata, penale pari al 10% del valore residuo del contratto",
+          "risk_level": "high",
+          "risk_area": "financial"
+        },
+        {
+          "type": "Minimum Commitment",
+          "description": "Obbligo di consumo minimo di €40.000/mese indipendentemente dall'utilizzo effettivo",
+          "risk_level": "medium",
+          "risk_area": "financial"
+        }
+      ],
+      "notes": "Penale di rescissione significativa. Il minimum commitment vincola budget anche in caso di sottoutilizzo."
+    },
+    {
+      "id": "CTR-010",
+      "client": "Iota Pharma",
+      "client_sector": "Healthcare",
+      "type": "Sviluppo Custom",
+      "product": "Clinical Data Platform",
+      "category": "Software",
+      "value_annual": 320000,
+      "total_value": 640000,
+      "currency": "EUR",
+      "start_date": "2025-09-01",
+      "end_date": "2027-08-31",
+      "duration_months": 24,
+      "auto_renewal": false,
+      "discount_percent": 5,
+      "standard_discount": 12,
+      "payment_terms_days": 30,
+      "status": "active",
+      "risk_score": 5,
+      "sla": {
+        "uptime": "99.95%",
+        "response_time_hours": 2,
+        "penalty_percent": 3
+      },
+      "clauses": [
+        {
+          "type": "Compliance GDPR/MDR",
+          "description": "Obbligo di conformità a GDPR e Medical Device Regulation per tutto il trattamento dati",
+          "risk_level": "high",
+          "risk_area": "legal"
+        },
+        {
+          "type": "IP Sharing",
+          "description": "La proprietà intellettuale della piattaforma è condivisa 50/50 tra le parti",
+          "risk_level": "medium",
+          "risk_area": "legal"
+        }
+      ],
+      "notes": "Settore regolamentato. La compliance GDPR/MDR richiede investimenti continui. IP condivisa da valutare."
+    },
+    {
+      "id": "CTR-847",
+      "client": "TechVenture Italia Srl",
+      "client_sector": "Technology",
+      "type": "Cloud Services",
+      "product": "VHosting Enterprise Cloud",
+      "category": "Cloud",
+      "value_annual": 0,
+      "total_value": 0,
+      "currency": "EUR",
+      "start_date": "2026-03-09",
+      "end_date": "2027-03-09",
+      "duration_months": 12,
+      "auto_renewal": true,
+      "discount_percent": 12,
+      "standard_discount": 12,
+      "payment_terms_days": 30,
+      "status": "active",
+      "risk_score": 3,
+      "sla": {
+        "uptime": "99.9%",
+        "response_time_hours": 24,
+        "penalty_percent": 0
+      },
+      "clauses": [
+        {
+          "type": "SLA Penalty",
+          "description": "Il fornitore garantisce un uptime del 99.9% ma non sono previste penali in caso di mancato raggiungimento",
+          "risk_level": "medium",
+          "risk_area": "operational"
+        },
+        {
+          "type": "Rinnovo Automatico",
+          "description": "Il contratto si rinnova automaticamente per 12 mesi se non disdetto con 15-21 giorni di preavviso",
+          "risk_level": "low",
+          "risk_area": "operational"
+        }
+      ],
+      "notes": "Contratto standard di servizi cloud con SLA e condizioni di mercato. Rischio complessivo contenuto grazie alla presenza di adeguate certificazioni di sicurezza e misure tecniche."
+    },
+    {
+      "id": "CTR-847",
+      "client": "TechVenture Italia Srl",
+      "client_sector": "Technology",
+      "type": "Cloud Services",
+      "product": "VHosting Enterprise Cloud",
+      "category": "Cloud",
+      "value_annual": 0,
+      "total_value": 0,
+      "currency": "EUR",
+      "start_date": "2026-03-09",
+      "end_date": "2027-03-09",
+      "duration_months": 12,
+      "auto_renewal": true,
+      "discount_percent": 12,
+      "standard_discount": 12,
+      "payment_terms_days": 30,
+      "status": "active",
+      "risk_score": 3,
+      "sla": {
+        "uptime": "99.9%",
+        "response_time_hours": 24,
+        "penalty_percent": 0
+      },
+      "clauses": [
+        {
+          "type": "SLA Penalty",
+          "description": "Il fornitore garantisce un uptime del 99.9% ma non sono previste penali in caso di mancato raggiungimento",
+          "risk_level": "medium",
+          "risk_area": "operational"
+        },
+        {
+          "type": "Rinnovo Automatico",
+          "description": "Il contratto si rinnova automaticamente per 12 mesi se non disdetto con 15-21 giorni di preavviso",
+          "risk_level": "low",
+          "risk_area": "operational"
+        },
+        {
+          "type": "Data Retention",
+          "description": "I dati potrebbero rimanere nei backup fino a 90 giorni dopo la cancellazione",
+          "risk_level": "medium",
+          "risk_area": "legal"
+        }
+      ],
+      "notes": "Contratto standard di servizi cloud con buone tutele per entrambe le parti. Rischio complessivo contenuto grazie alle certificazioni ISO del fornitore e alle misure di sicurezza documentate."
+    },
+    {
+      "id": "CTR-847",
+      "client": "TechVenture Italia Srl",
+      "client_sector": "Technology",
+      "type": "Cloud Services",
+      "product": "Enterprise Cloud Hosting",
+      "category": "Cloud",
+      "value_annual": 0,
+      "total_value": 0,
+      "currency": "EUR",
+      "start_date": "2026-03-09",
+      "end_date": "2027-03-09",
+      "duration_months": 12,
+      "auto_renewal": true,
+      "discount_percent": 12,
+      "standard_discount": 12,
+      "payment_terms_days": 30,
+      "status": "active",
+      "risk_score": 3,
+      "sla": {
+        "uptime": "99.9%",
+        "response_time_hours": 24,
+        "penalty_percent": 0
+      },
+      "clauses": [
+        {
+          "type": "SLA Penalty",
+          "description": "Il fornitore garantisce un uptime del 99.9% ma non sono previste penali in caso di mancato raggiungimento",
+          "risk_level": "medium",
+          "risk_area": "operational"
+        },
+        {
+          "type": "Rinnovo Automatico",
+          "description": "Il contratto si rinnova automaticamente per 12 mesi se non disdetto con 15-21 giorni di preavviso",
+          "risk_level": "low",
+          "risk_area": "operational"
+        },
+        {
+          "type": "Data Retention",
+          "description": "I dati potrebbero rimanere nei backup fino a 90 giorni dopo la cancellazione",
+          "risk_level": "medium",
+          "risk_area": "legal"
+        }
+      ],
+      "notes": "Contratto standard di cloud hosting con buone garanzie di sicurezza e certificazioni ISO. Rischio complessivo contenuto grazie alle misure tecniche e organizzative documentate."
+    },
+    {
+      "id": "CTR-847",
+      "client": "Alfa Manufacturing S.r.l.",
+      "client_sector": "Manufacturing",
+      "type": "SaaS Enterprise",
+      "product": "NexusERP v4.2",
+      "category": "Software",
+      "value_annual": 141360,
+      "total_value": 424080,
+      "currency": "EUR",
+      "start_date": "2022-05-01",
+      "end_date": "2025-04-30",
+      "duration_months": 36,
+      "auto_renewal": false,
+      "discount_percent": 24,
+      "standard_discount": 12,
+      "payment_terms_days": 30,
+      "status": "expired",
+      "risk_score": 7,
+      "sla": {
+        "uptime": "99.9%",
+        "response_time_hours": 1,
+        "penalty_percent": 20
+      },
+      "clauses": [
+        {
+          "type": "Sconto Anomalo",
+          "description": "Sconto del 24% applicato è superiore alla policy standard del 15%",
+          "risk_level": "high",
+          "risk_area": "financial"
+        },
+        {
+          "type": "SLA Penalty",
+          "description": "Penali SLA cumulative fino al 20% del canone annuo con trigger automatico",
+          "risk_level": "medium",
+          "risk_area": "operational"
+        },
+        {
+          "type": "Exit Clause",
+          "description": "Cliente può recedere con soli 30 giorni di preavviso senza penali",
+          "risk_level": "high",
+          "risk_area": "financial"
+        }
+      ],
+      "next_step_action": "Avviare negoziazione nuovo contratto con allineamento sconti a policy standard",
+      "notes": "Contratto ad alto rischio per lo sconto eccessivo e la facile exit clause. Necessario rivedere le condizioni commerciali nel prossimo rinnovo per allinearle agli standard aziendali."
+    },
+    {
+      "id": "CTR-847",
+      "client": "Alfa Manufacturing S.r.l.",
+      "client_sector": "Manufacturing",
+      "type": "SaaS Enterprise",
+      "product": "NexusERP v4.2",
+      "category": "Software",
+      "value_annual": 141360,
+      "total_value": 424080,
+      "currency": "EUR",
+      "start_date": "2022-05-01",
+      "end_date": "2025-04-30",
+      "duration_months": 36,
+      "auto_renewal": false,
+      "discount_percent": 24,
+      "standard_discount": 12,
+      "payment_terms_days": 30,
+      "status": "expired",
+      "risk_score": 7,
+      "sla": {
+        "uptime": "99.9%",
+        "response_time_hours": 1,
+        "penalty_percent": 20
+      },
+      "clauses": [
+        {
+          "type": "Sconto Anomalo",
+          "description": "Sconto del 24% applicato è superiore alla policy standard del 15%",
+          "risk_level": "high",
+          "risk_area": "financial"
+        },
+        {
+          "type": "SLA Penalty",
+          "description": "Penali SLA cumulative fino al 20% del canone annuo con trigger automatico",
+          "risk_level": "medium",
+          "risk_area": "operational"
+        },
+        {
+          "type": "Exit Clause",
+          "description": "Cliente può recedere con soli 30 giorni preavviso senza penali",
+          "risk_level": "high",
+          "risk_area": "financial"
+        }
+      ],
+      "next_step_action": "Contattare cliente per proposta rinnovo con riallineamento sconti a policy standard",
+      "notes": "Contratto ad alto rischio per sconto eccessivo e facile recesso cliente. SLA molto stringenti con penali significative richiedono monitoraggio attento delle performance."
+    },
+    {
+      "id": "CTR-847",
+      "client": "Alfa Manufacturing S.r.l.",
+      "client_sector": "Manufacturing",
+      "type": "SaaS Enterprise",
+      "product": "NexusERP v4.2",
+      "category": "Software",
+      "value_annual": 141360,
+      "total_value": 424080,
+      "currency": "EUR",
+      "start_date": "2022-05-01",
+      "end_date": "2025-04-30",
+      "duration_months": 36,
+      "auto_renewal": false,
+      "discount_percent": 24,
+      "standard_discount": 12,
+      "payment_terms_days": 30,
+      "status": "expired",
+      "risk_score": 7,
+      "sla": {
+        "uptime": "99.9%",
+        "response_time_hours": 1,
+        "penalty_percent": 20
+      },
+      "clauses": [
+        {
+          "type": "Sconto Anomalo",
+          "description": "Sconto del 24% applicato è superiore alla policy standard del 15%",
+          "risk_level": "high",
+          "risk_area": "financial"
+        },
+        {
+          "type": "SLA Penalty",
+          "description": "Penali SLA cumulative fino al 20% del canone annuo con trigger automatico",
+          "risk_level": "medium",
+          "risk_area": "operational"
+        },
+        {
+          "type": "Exit Clause",
+          "description": "Cliente può recedere con soli 30gg preavviso senza penali",
+          "risk_level": "high",
+          "risk_area": "financial"
+        }
+      ],
+      "next_step_action": "Avviare negoziazione rinnovo contrattuale con revisione sconti e clausole di recesso",
+      "notes": "Contratto ad alto rischio per sconto elevato e facile recesso cliente. Necessario rivedere condizioni commerciali in fase di rinnovo per allinearle alle policy standard."
+    }
+  ],
+  "revenue_by_year": {
+    "2024": 2800000,
+    "2025": 3650000,
+    "2026": 4170000
+  },
+  "revenue_by_category": {
+    "Software": 1574080,
+    "Hardware": 280000,
+    "Consulting": 600000,
+    "Cloud": 380000,
+    "Services": 670000,
+    "Training": 90000
+  }
+}
