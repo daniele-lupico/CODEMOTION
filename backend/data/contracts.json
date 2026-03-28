@@ -2,7 +2,7 @@
   "company": "TechVenture Italia Srl",
   "extraction_date": "2026-03-28",
   "total_contracts": 16,
-  "total_revenue": 4594080,
+  "total_revenue": 3427360,
   "contracts": [
     {
       "id": "CTR-001",
@@ -232,7 +232,7 @@
           "risk_area": "legal"
         }
       ],
-      "notes": "⚠️ CONTRATTO SCADUTO il 28/02/2026. Il cliente continua a richiedere servizi. Urgente formalizzare rinnovo o chiusura."
+      "notes": "CONTRATTO SCADUTO il 28/02/2026. Il cliente continua a richiedere servizi. Urgente formalizzare rinnovo o chiusura."
     },
     {
       "id": "CTR-007",
@@ -432,98 +432,6 @@
     },
     {
       "id": "CTR-847",
-      "client": "TechVenture Italia Srl",
-      "client_sector": "Technology",
-      "type": "Cloud Services",
-      "product": "VHosting Enterprise Cloud",
-      "category": "Cloud",
-      "value_annual": 0,
-      "total_value": 0,
-      "currency": "EUR",
-      "start_date": "2026-03-09",
-      "end_date": "2027-03-09",
-      "duration_months": 12,
-      "auto_renewal": true,
-      "discount_percent": 12,
-      "standard_discount": 12,
-      "payment_terms_days": 30,
-      "status": "active",
-      "risk_score": 3,
-      "sla": {
-        "uptime": "99.9%",
-        "response_time_hours": 24,
-        "penalty_percent": 0
-      },
-      "clauses": [
-        {
-          "type": "SLA Penalty",
-          "description": "Il fornitore garantisce un uptime del 99.9% ma non sono previste penali in caso di mancato raggiungimento",
-          "risk_level": "medium",
-          "risk_area": "operational"
-        },
-        {
-          "type": "Rinnovo Automatico",
-          "description": "Il contratto si rinnova automaticamente per 12 mesi se non disdetto con 15-21 giorni di preavviso",
-          "risk_level": "low",
-          "risk_area": "operational"
-        },
-        {
-          "type": "Data Retention",
-          "description": "I dati potrebbero rimanere nei backup fino a 90 giorni dopo la cancellazione",
-          "risk_level": "medium",
-          "risk_area": "legal"
-        }
-      ],
-      "notes": "Contratto standard di servizi cloud con buone tutele per entrambe le parti. Rischio complessivo contenuto grazie alle certificazioni ISO del fornitore e alle misure di sicurezza documentate."
-    },
-    {
-      "id": "CTR-847",
-      "client": "TechVenture Italia Srl",
-      "client_sector": "Technology",
-      "type": "Cloud Services",
-      "product": "Enterprise Cloud Hosting",
-      "category": "Cloud",
-      "value_annual": 0,
-      "total_value": 0,
-      "currency": "EUR",
-      "start_date": "2026-03-09",
-      "end_date": "2027-03-09",
-      "duration_months": 12,
-      "auto_renewal": true,
-      "discount_percent": 12,
-      "standard_discount": 12,
-      "payment_terms_days": 30,
-      "status": "active",
-      "risk_score": 3,
-      "sla": {
-        "uptime": "99.9%",
-        "response_time_hours": 24,
-        "penalty_percent": 0
-      },
-      "clauses": [
-        {
-          "type": "SLA Penalty",
-          "description": "Il fornitore garantisce un uptime del 99.9% ma non sono previste penali in caso di mancato raggiungimento",
-          "risk_level": "medium",
-          "risk_area": "operational"
-        },
-        {
-          "type": "Rinnovo Automatico",
-          "description": "Il contratto si rinnova automaticamente per 12 mesi se non disdetto con 15-21 giorni di preavviso",
-          "risk_level": "low",
-          "risk_area": "operational"
-        },
-        {
-          "type": "Data Retention",
-          "description": "I dati potrebbero rimanere nei backup fino a 90 giorni dopo la cancellazione",
-          "risk_level": "medium",
-          "risk_area": "legal"
-        }
-      ],
-      "notes": "Contratto standard di cloud hosting con buone garanzie di sicurezza e certificazioni ISO. Rischio complessivo contenuto grazie alle misure tecniche e organizzative documentate."
-    },
-    {
-      "id": "CTR-847",
       "client": "Alfa Manufacturing S.r.l.",
       "client_sector": "Manufacturing",
       "type": "SaaS Enterprise",
@@ -570,111 +478,288 @@
       "notes": "Contratto ad alto rischio per lo sconto eccessivo e la facile exit clause. Necessario rivedere le condizioni commerciali nel prossimo rinnovo per allinearle agli standard aziendali."
     },
     {
-      "id": "CTR-847",
-      "client": "Alfa Manufacturing S.r.l.",
-      "client_sector": "Manufacturing",
+      "id": "CTR-247",
+      "client": "Ahoj",
+      "client_sector": "Consulting",
       "type": "SaaS Enterprise",
-      "product": "NexusERP v4.2",
+      "product": "Freader",
       "category": "Software",
-      "value_annual": 141360,
-      "total_value": 424080,
+      "value_annual": 28000,
+      "total_value": 56000,
       "currency": "EUR",
-      "start_date": "2022-05-01",
-      "end_date": "2025-04-30",
-      "duration_months": 36,
-      "auto_renewal": false,
-      "discount_percent": 24,
-      "standard_discount": 12,
+      "start_date": "2024-12-19",
+      "end_date": "2026-12-18",
+      "duration_months": 24,
+      "auto_renewal": true,
+      "discount_percent": 0,
+      "standard_discount": 0,
       "payment_terms_days": 30,
-      "status": "expired",
-      "risk_score": 7,
+      "status": "active",
+      "risk_score": 6,
       "sla": {
-        "uptime": "99.9%",
-        "response_time_hours": 1,
-        "penalty_percent": 20
+        "uptime": "99.5%",
+        "response_time_hours": 4,
+        "penalty_percent": 5
       },
       "clauses": [
         {
-          "type": "Sconto Anomalo",
-          "description": "Sconto del 24% applicato è superiore alla policy standard del 15%",
-          "risk_level": "high",
+          "type": "SLA Penalty",
+          "description": "Credito di servizio del 5% del Canone di Licenza trimestrale in caso di Uptime inferiore al 98%, cumulabile fino al 10% trimestrale. I crediti non si applicano al Corrispettivo Variabile.",
+          "risk_level": "low",
           "risk_area": "financial"
         },
         {
-          "type": "SLA Penalty",
-          "description": "Penali SLA cumulative fino al 20% del canone annuo con trigger automatico",
-          "risk_level": "medium",
+          "type": "Rinnovo Automatico",
+          "description": "Rinnovo automatico biennale salvo disdetta con soli 12 giorni di preavviso — termine insolitamente breve per un contratto biennale.",
+          "risk_level": "high",
           "risk_area": "operational"
         },
         {
-          "type": "Exit Clause",
-          "description": "Cliente può recedere con soli 30 giorni preavviso senza penali",
+          "type": "Data Retention Risk",
+          "description": "I Documenti e gli Output vengono cancellati in modo irreversibile dopo 20 giorni dalla loro creazione, senza possibilità di recupero successivo.",
+          "risk_level": "high",
+          "risk_area": "operational"
+        },
+        {
+          "type": "Recesso Vincolato",
+          "description": "Il contratto non prevede clausola di recesso anticipato ad nutum. Il Cliente è vincolato al pagamento dei canoni per l'intera durata di 24 mesi salvo risoluzione per inadempimento.",
           "risk_level": "high",
           "risk_area": "financial"
+        },
+        {
+          "type": "Limitazione Responsabilità",
+          "description": "La responsabilità totale del Fornitore è limitata al 20% dei canoni versati nell'anno precedente — tetto molto basso a tutela del Fornitore.",
+          "risk_level": "high",
+          "risk_area": "financial"
+        },
+        {
+          "type": "Dati Vietati",
+          "description": "È espressamente vietato caricare categorie particolari di dati (ex art. 9 GDPR) e dati giudiziari (ex art. 10 GDPR) senza preventivo accordo scritto.",
+          "risk_level": "medium",
+          "risk_area": "legal"
+        },
+        {
+          "type": "Verifica Output AI",
+          "description": "Il contratto trasferisce interamente al Cliente il rischio di errori derivanti dall'AI generativa. Il Fornitore non garantisce l'accuratezza degli output.",
+          "risk_level": "medium",
+          "risk_area": "operational"
         }
       ],
-      "next_step_action": "Contattare cliente per proposta rinnovo con riallineamento sconti a policy standard",
-      "notes": "Contratto ad alto rischio per sconto eccessivo e facile recesso cliente. SLA molto stringenti con penali significative richiedono monitoraggio attento delle performance."
+      "next_step_action": "Negoziare estensione data retention a 90 giorni, preavviso disdetta a 30 giorni e DPA separato prima di trattare dati sensibili.",
+      "notes": "Canone fisso trimestrale di €7.000 (€28.000/anno), più costo variabile a consumo oltre 1.000 pagine/mese. Rischio principale: recesso impossibile prima dei 24 mesi e cancellazione irreversibile dati dopo 20 giorni."
     },
     {
-      "id": "CTR-847",
-      "client": "Alfa Manufacturing S.r.l.",
-      "client_sector": "Manufacturing",
+      "id": "CTR-042",
+      "client": "Hej",
+      "client_sector": "Technology",
       "type": "SaaS Enterprise",
-      "product": "NexusERP v4.2",
+      "product": "Freader",
       "category": "Software",
-      "value_annual": 141360,
-      "total_value": 424080,
+      "value_annual": 20000,
+      "total_value": 20000,
       "currency": "EUR",
-      "start_date": "2022-05-01",
-      "end_date": "2025-04-30",
-      "duration_months": 36,
-      "auto_renewal": false,
-      "discount_percent": 24,
+      "start_date": "2025-08-07",
+      "end_date": "2026-08-07",
+      "duration_months": 12,
+      "auto_renewal": true,
+      "discount_percent": 0,
       "standard_discount": 12,
       "payment_terms_days": 30,
-      "status": "expired",
-      "risk_score": 7,
+      "status": "active",
+      "risk_score": 5,
       "sla": {
-        "uptime": "99.9%",
-        "response_time_hours": 1,
-        "penalty_percent": 20
+        "uptime": "99.5%",
+        "response_time_hours": 4,
+        "penalty_percent": 7
       },
       "clauses": [
         {
-          "type": "Sconto Anomalo",
-          "description": "Sconto del 24% applicato è superiore alla policy standard del 15%",
-          "risk_level": "high",
+          "type": "SLA Penalty",
+          "description": "Penale per downtime inferiore al 98% trimestrale: credito di servizio pari al 7% del Canone di Licenza trimestrale (€5.000), con tetto massimo del 10% del canone trimestrale cumulato con altri SLA.",
+          "risk_level": "medium",
           "risk_area": "financial"
         },
         {
-          "type": "SLA Penalty",
-          "description": "Penali SLA cumulative fino al 20% del canone annuo con trigger automatico",
+          "type": "Rinnovo Automatico",
+          "description": "Rinnovo automatico per periodi di 12 mesi salvo disdetta con preavviso scritto di almeno 30 giorni.",
           "risk_level": "medium",
           "risk_area": "operational"
         },
         {
-          "type": "Exit Clause",
-          "description": "Cliente può recedere con soli 30gg preavviso senza penali",
+          "type": "Data Retention Risk",
+          "description": "I Documenti e i Dati di Output sono conservati per soli 20 giorni dalla data di elaborazione, con cancellazione irreversibile e definitiva.",
           "risk_level": "high",
-          "risk_area": "financial"
+          "risk_area": "operational"
+        },
+        {
+          "type": "Limitazione Responsabilità",
+          "description": "Responsabilità complessiva del Fornitore limitata al 20% dei Canoni di Licenza corrisposti nell’anno solare precedente (max €1.000 nel primo anno, essendo il canone fisso trimestrale €5.000).",
+          "risk_level": "high",
+          "risk_area": "legal"
+        },
+        {
+          "type": "Dati Vietati",
+          "description": "Divieto esplicito di caricare dati sensibili ai sensi degli artt. 9 e 10 GDPR (es. dati razziali, politici, sanitari, biometrici, condanne penali), salvo accordo scritto e DPA specifico.",
+          "risk_level": "medium",
+          "risk_area": "legal"
+        },
+        {
+          "type": "Verifica Output AI",
+          "description": "Il Cliente è esclusivamente responsabile della verifica e validazione dei Dati di Output generati da componenti di AI generativa prima di qualsiasi utilizzo in processi decisionali, legali, contabili o di compliance.",
+          "risk_level": "high",
+          "risk_area": "operational"
         }
       ],
-      "next_step_action": "Avviare negoziazione rinnovo contrattuale con revisione sconti e clausole di recesso",
-      "notes": "Contratto ad alto rischio per sconto elevato e facile recesso cliente. Necessario rivedere condizioni commerciali in fase di rinnovo per allinearle alle policy standard."
+      "next_step_action": "Verificare la fattibilità di un accordo di DPA con clausole di retention estesa e valutare l’impatto operativo della clausola di responsabilità al 20%.",
+      "notes": "Canone fisso trimestrale di €5.000 (€20.000 annui), più corrispettivo variabile a consumo (franchigia 1.000 pagine/mese, poi €0,20/€0,18/€0,14 per pagina). Nessun sconto applicato, nonostante lo sconto standard del 12% sia previsto."
+    },
+    {
+      "id": "CTR-042",
+      "client": "Ola",
+      "client_sector": "Technology",
+      "type": "SaaS Enterprise",
+      "product": "Freader",
+      "category": "Software",
+      "value_annual": 40000,
+      "total_value": 40000,
+      "currency": "EUR",
+      "start_date": "2025-04-14",
+      "end_date": "2026-04-14",
+      "duration_months": 12,
+      "auto_renewal": true,
+      "discount_percent": 0,
+      "standard_discount": 12,
+      "payment_terms_days": 30,
+      "status": "active",
+      "risk_score": 5,
+      "sla": {
+        "uptime": "99.5%",
+        "response_time_hours": 4,
+        "penalty_percent": 7
+      },
+      "clauses": [
+        {
+          "type": "Recesso Vincolato",
+          "description": "Il contratto ha durata iniziale di 12 mesi e si rinnova automaticamente per periodi di 12 mesi salvo disdetta con preavviso scritto di almeno 30 giorni; non è previsto recesso anticipato unilaterale prima della scadenza naturale.",
+          "risk_level": "high",
+          "risk_area": "legal"
+        },
+        {
+          "type": "Data Retention Risk",
+          "description": "I Documenti e i Dati di Output sono conservati per soli 20 giorni dalla data di elaborazione, dopodiché vengono cancellati in via irreversibile e definitiva, senza possibilità di recupero.",
+          "risk_level": "medium",
+          "risk_area": "operational"
+        },
+        {
+          "type": "Limitazione Responsabilità",
+          "description": "La responsabilità complessiva del Fornitore non può eccedere il 20% del totale dei Canoni di Licenza corrisposti nel corso dell’anno solare precedente all’evento dannoso.",
+          "risk_level": "medium",
+          "risk_area": "financial"
+        },
+        {
+          "type": "Dati Vietati",
+          "description": "Il Cliente è tenuto a non caricare dati sensibili o particolari ai sensi degli artt. 9 e 10 GDPR, salvo accordo scritto e DPA specifico.",
+          "risk_level": "low",
+          "risk_area": "legal"
+        },
+        {
+          "type": "Verifica Output AI",
+          "description": "Il Cliente rimane esclusivamente responsabile della verifica e validazione dei Dati di Output prima del loro utilizzo in processi decisionali, legali, contabili, regolamentari o di compliance.",
+          "risk_level": "medium",
+          "risk_area": "operational"
+        }
+      ],
+      "next_step_action": "Valutare l’impatto della clausola di rinnovo automatico con preavviso breve e verificare la fattibilità di una clausola di recesso anticipato con penale contenuta.",
+      "notes": "Canone fisso trimestrale di €10.000 (€40.000 annui), con corrispettivo variabile a consumo (franchigia 1.000 pagine/mese). Nessuno sconto applicato, al di sotto della standard 12%."
+    },
+    {
+      "id": "CTR-042",
+      "client": "Sveiki",
+      "client_sector": "Consulting",
+      "type": "SaaS Enterprise",
+      "product": "Freader",
+      "category": "Software",
+      "value_annual": 28000,
+      "total_value": 42000,
+      "currency": "EUR",
+      "start_date": "2025-02-05",
+      "end_date": "2026-08-04",
+      "duration_months": 18,
+      "auto_renewal": true,
+      "discount_percent": 0,
+      "standard_discount": 12,
+      "payment_terms_days": 30,
+      "status": "active",
+      "risk_score": 5,
+      "sla": {
+        "uptime": "99.5%",
+        "response_time_hours": 4,
+        "penalty_percent": 9
+      },
+      "clauses": [
+        {
+          "type": "SLA Penalty",
+          "description": "Penale per downtime inferiore al 98%: credito di servizio pari al 9% del canone trimestrale (€630), cumulabile con altri crediti fino al 12% del canone trimestrale.",
+          "risk_level": "low",
+          "risk_area": "financial"
+        },
+        {
+          "type": "Rinnovo Automatico",
+          "description": "Rinnovo automatico per periodi di 18 mesi salvo disdetta con preavviso di 90 giorni.",
+          "risk_level": "medium",
+          "risk_area": "operational"
+        },
+        {
+          "type": "Data Retention Risk",
+          "description": "I documenti e i dati di output sono conservati solo 20 giorni dalla data di elaborazione, con cancellazione irreversibile e definitiva.",
+          "risk_level": "high",
+          "risk_area": "operational"
+        },
+        {
+          "type": "Limitazione Responsabilità",
+          "description": "Responsabilità complessiva del fornitore limitata al 20% dei canoni di licenza corrisposti nell’anno solare precedente l’evento dannoso.",
+          "risk_level": "medium",
+          "risk_area": "legal"
+        },
+        {
+          "type": "Dati Vietati",
+          "description": "Divieto esplicito di caricare dati sensibili ai sensi degli artt. 9 e 10 GDPR, salvo accordo scritto e DPA specifico.",
+          "risk_level": "low",
+          "risk_area": "legal"
+        },
+        {
+          "type": "Verifica Output AI",
+          "description": "Il Cliente è esclusivamente responsabile della verifica e validazione dei dati di output generati da componenti di AI generativa prima dell’uso in processi decisionali, legali, contabili o di compliance.",
+          "risk_level": "high",
+          "risk_area": "operational"
+        },
+        {
+          "type": "Lock-in Tecnologico",
+          "description": "Hosting su Microsoft Azure - West Europe con dipendenza infrastrutturale non contrattualmente reversibile senza interruzione del servizio.",
+          "risk_level": "medium",
+          "risk_area": "operational"
+        }
+      ],
+      "next_step_action": "Verificare con il cliente la fattibilità di una clausola di recesso anticipato e implementare procedure di backup esterno per i dati critici.",
+      "notes": "Canone fisso trimestrale di €7.000 (€28.000 annui), con corrispettivo variabile a consumo non incluso nel valore annuo. Nessun sconto applicato, al di sotto della scontistica standard del 12%."
     }
   ],
   "revenue_by_year": {
-    "2024": 2800000,
-    "2025": 3650000,
-    "2026": 4170000
+    "2024": 1328000,
+    "2025": 1868000,
+    "2026": 90000,
+    "2022": 141360
   },
   "revenue_by_category": {
-    "Software": 1574080,
+    "Software": 1407360,
     "Hardware": 280000,
     "Consulting": 600000,
-    "Cloud": 380000,
     "Services": 670000,
+    "Cloud": 380000,
     "Training": 90000
+  },
+  "last_uploaded": {
+    "id": "CTR-042",
+    "client": "Hej"
   }
 }

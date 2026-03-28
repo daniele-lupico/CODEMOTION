@@ -1316,11 +1316,14 @@ tbody tr.clickable-row:hover {
   padding: 20px;
   margin-top: 16px;
   width: 100%;
-  max-width: 700px;
+  max-width: 720px;
+  /* height is set dynamically by renderInChatChart */
+  min-height: 220px;
+  position: relative;
 }
 .chat-chart-card canvas {
   max-width: 100%;
-  max-height: 300px;
+  height: 100% !important;
 }
 
 /* Universal Input Bar */
@@ -1429,4 +1432,209 @@ tbody tr.clickable-row:hover {
 }
 .file-attachment-chip svg {
   color: var(--red);
+}
+
+/* === FOLDER SYSTEM === */
+
+.nav-group {
+  margin-bottom: 8px;
+}
+
+.nav-group-title {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 8px 4px 4px;
+}
+
+.nav-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 4px 4px;
+}
+
+.nav-group-header .nav-group-title {
+  padding: 0;
+}
+
+.btn-new-folder {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-size: 1.1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+.btn-new-folder:hover {
+  color: var(--text-primary);
+  background: var(--bg-surface-hover);
+}
+
+.folder-item {
+  border-radius: var(--radius-sm);
+  margin-bottom: 1px;
+}
+
+.folder-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  user-select: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.folder-header:hover {
+  background: var(--bg-surface-hover);
+  color: var(--text-primary);
+}
+.folder-header.drag-over {
+  background: var(--accent-bg);
+  color: var(--accent-light);
+  outline: 1px dashed var(--accent-light);
+  outline-offset: -1px;
+}
+
+.folder-toggle {
+  transition: transform 0.15s;
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+.folder-toggle.open {
+  transform: rotate(90deg);
+}
+
+.folder-icon {
+  flex-shrink: 0;
+  color: var(--orange);
+}
+
+.folder-name {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.folder-count {
+  font-size: 0.68rem;
+  background: var(--bg-surface-hover);
+  color: var(--text-muted);
+  padding: 1px 5px;
+  border-radius: 99px;
+  flex-shrink: 0;
+}
+
+.folder-delete {
+  background: transparent;
+  border: none;
+  color: transparent;
+  cursor: pointer;
+  padding: 2px 3px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.folder-header:hover .folder-delete {
+  color: var(--text-muted);
+}
+.folder-delete:hover {
+  color: var(--red) !important;
+  background: var(--red-bg);
+}
+
+.folder-chats {
+  padding-left: 10px;
+  display: none;
+}
+.folder-chats.open {
+  display: block;
+}
+
+/* Draggable chat items */
+.nav-item[draggable="true"] {
+  cursor: grab;
+  position: relative;
+}
+.nav-item[draggable="true"]:active {
+  cursor: grabbing;
+  opacity: 0.7;
+}
+
+/* Context menu button on nav items */
+.chat-menu-btn {
+  background: transparent;
+  border: none;
+  color: transparent;
+  cursor: pointer;
+  padding: 2px 3px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.nav-item:hover .chat-menu-btn {
+  color: var(--text-muted);
+}
+.chat-menu-btn:hover {
+  color: var(--text-primary) !important;
+  background: var(--border-strong);
+}
+
+/* Folder context dropdown */
+.folder-context-menu {
+  position: fixed;
+  z-index: 9999;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 4px;
+  min-width: 180px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+.folder-context-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+.folder-context-menu button:hover {
+  background: var(--bg-surface-hover);
+  color: var(--text-primary);
+}
+.folder-context-menu .menu-separator {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: 4px 0;
+}
+.folder-context-menu .menu-submenu-title {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  padding: 4px 10px 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: default;
+}
+.folder-context-menu .menu-submenu-title:hover {
+  background: transparent;
+  color: var(--text-muted);
 }
