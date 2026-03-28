@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
   loadSidebar();
   // Close context menus on outside click
   document.addEventListener('click', () => closeFolderContextMenu());
+  // Source panel close button
+  const sourcePanelClose = document.getElementById('source-panel-close');
+  if (sourcePanelClose) sourcePanelClose.addEventListener('click', closeSourcePanel);
 });
 
 function initSettings() {
@@ -214,9 +217,19 @@ function appendMessage(role, text, attachedFilename = null, chartData = null) {
   const msgDiv = document.createElement('div');
   msgDiv.className = `chat-message ${role}`;
   
-  // Format citations into clickable or highlighted spans [Fonte: ...]
+  // Format citations: [Fonte: CTR-XXX | "verbatim quote"] → clickable chip
+  // Capture: contractId (e.g. CTR-001) and optional quote after the pipe
   let formattedText = escapeHtml(text).replace(/\n/g, '<br/>');
-  formattedText = formattedText.replace(/\[Fonte: (.*?)\]/g, '<span class="chat-citation" title="Clicca per aprire il documento originale">$1</span>');
+  formattedText = formattedText.replace(
+    /\[Fonte:\s*(CTR-[\w\d-]+)\s*\|\s*&quot;([^&]+)&quot;\]/g,
+    (_, ctrId, quote) =>
+      `<span class="chat-citation" data-ctr="${ctrId}" data-quote="${quote.replace(/"/g, '&quot;')}" title="Clicca per vedere nel documento">${ctrId}</span>`
+  );
+  // Fallback: old format [Fonte: anything] without pipe+quote
+  formattedText = formattedText.replace(
+    /\[Fonte:\s*([^\]]+)\]/g,
+    (_, label) => `<span class="chat-citation" data-ctr="${label.split(/[\s–-]/)[0]}" data-quote="${label}" title="Clicca per vedere nel documento">${label}</span>`
+  );
   
   // Format markdown bold
   formattedText = formattedText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
@@ -327,6 +340,17 @@ function appendMessage(role, text, attachedFilename = null, chartData = null) {
 
   if (chartData && role === 'ai') {
     renderInChatChart(chartId, chartData);
+  }
+
+  // Attach source-viewer click on citation chips
+  if (role === 'ai') {
+    msgDiv.querySelectorAll('.chat-citation').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const ctrId = chip.dataset.ctr || '';
+        const quote = chip.dataset.quote || chip.textContent;
+        openSourcePanel(ctrId, quote);
+      });
+    });
   }
 }
 
@@ -831,6 +855,103 @@ function restoreChat(chat) {
     appendMessage(msg.role, msg.content);
   });
   scrollToBottom();
+}
+
+// ── Source Viewer Panel ───────────────────────────────────────────────────
+
+function closeSourcePanel() {
+  const panel = document.getElementById('source-panel');
+  if (panel) panel.style.display = 'none';
+}
+
+async function openSourcePanel(contractId, quote) {
+  const panel    = document.getElementById('source-panel');
+  const loading  = document.getElementById('source-loading');
+  const snippets = document.getElementById('source-snippets');
+  const queryEl  = document.getElementById('source-panel-query');
+  const titleEl  = document.getElementById('source-panel-contract');
+  if (!panel) return;
+
+  // Show panel immediately
+  panel.style.display = 'flex';
+  loading.style.display = 'flex';
+  snippets.innerHTML = '';
+  titleEl.textContent = contractId || 'Documento originale';
+  queryEl.textContent = quote ? `Ricerca: "${quote}"` : '';
+
+  // Extract just the contract ID part (e.g. "CTR-001" from "CTR-001 - Clausola")
+  const ctrId = (contractId || '').match(/CTR-[\w\d]+/i)?.[0] || contractId;
+
+  try {
+    const url = `${API}/api/source/${encodeURIComponent(ctrId)}?q=${encodeURIComponent(quote)}`;
+    const res  = await fetch(url);
+    loading.style.display = 'none';
+
+    if (!res.ok) {
+      snippets.innerHTML = `
+        <div class="source-not-found">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Il testo originale di <strong>${ctrId}</strong> non è disponibile.<br>
+          Ricarica il documento per abilitare questa funzione.
+        </div>`;
+      return;
+    }
+
+    const data = await res.json();
+
+    if (!data.found || data.snippets.length === 0) {
+      snippets.innerHTML = `
+        <div class="source-not-found">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          Nessun passaggio trovato per questa citazione.<br>
+          <span style="font-size:.75rem">Il modello potrebbe aver parafrasato il testo originale.</span>
+        </div>`;
+      return;
+    }
+
+    data.snippets.forEach((snippet, i) => {
+      const el = document.createElement('div');
+      el.className = 'source-snippet';
+
+      const label = document.createElement('div');
+      label.className = 'source-snippet-label';
+      label.textContent = i === 0 ? 'Corrispondenza principale' : `Corrispondenza ${i + 1}`;
+      el.appendChild(label);
+
+      // Render text with highlights
+      const textEl = document.createElement('div');
+      textEl.innerHTML = applyHighlights(snippet.text, snippet.highlights);
+      el.appendChild(textEl);
+
+      snippets.appendChild(el);
+    });
+  } catch (err) {
+    loading.style.display = 'none';
+    snippets.innerHTML = `<div class="source-not-found">Errore di connessione al server.</div>`;
+  }
+}
+
+function applyHighlights(text, highlights) {
+  if (!highlights || highlights.length === 0) return escapeHtml(text);
+  // Merge overlapping ranges
+  const sorted = [...highlights].sort((a, b) => a.start - b.start);
+  const merged = [];
+  for (const h of sorted) {
+    if (merged.length && h.start <= merged[merged.length - 1].end) {
+      merged[merged.length - 1].end = Math.max(merged[merged.length - 1].end, h.end);
+    } else {
+      merged.push({...h});
+    }
+  }
+  let result = '';
+  let cursor = 0;
+  for (const {start, end} of merged) {
+    result += escapeHtml(text.slice(cursor, start));
+    result += `<mark>${escapeHtml(text.slice(start, end))}</mark>`;
+    cursor = end;
+  }
+  result += escapeHtml(text.slice(cursor));
+  return result;
 }
 
 async function saveCurrentChat(firstUserText) {
