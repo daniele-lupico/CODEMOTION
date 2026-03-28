@@ -30,19 +30,11 @@
           </button>
         </div>
 
-        <div class="nav-group">
-          <div class="nav-group-title">PROGETTI RECENTI</div>
-          <button class="nav-item active">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-            <span class="nav-text">Analisi Fornitori IT</span>
-          </button>
-          <button class="nav-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-            <span class="nav-text">Progetto Alpha (NDA)</span>
-          </button>
+        <div id="folders-section" class="nav-group">
+          <!-- folders populated by JS -->
         </div>
 
-        <div class="nav-group">
+        <div id="history-section" class="nav-group">
           <div class="nav-group-title">CRONOLOGIA CHAT</div>
           <button class="nav-item">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
@@ -86,11 +78,6 @@
             </div>
             <div class="chat-content">
               <p>Ciao, sono il tuo ContractAI! Posso analizzare un nuovo PDF che mi carichi, generare grafici sul portafoglio attuale o rispondere a domande legali specifiche in base all'archivio.</p>
-              <div class="chat-suggestions">
-                <button class="chat-suggestion-chip">Genera un grafico del fatturato per cliente</button>
-                <button class="chat-suggestion-chip">Mostrami l'elenco dei contratti in scadenza</button>
-                <button class="chat-suggestion-chip">Quali sono le clausole più rischiose che abbiamo?</button>
-              </div>
             </div>
           </div>
         </div>
@@ -149,6 +136,12 @@
     </div>
   </div>
 
+  <script>
+    // Redirect to landing if not authenticated (before main.js loads)
+    if (!localStorage.getItem('cai_token')) {
+      window.location.replace('/landing.html');
+    }
+  </script>
   <script type="module" src="/src/main.js"></script>
 </body>
 </html>

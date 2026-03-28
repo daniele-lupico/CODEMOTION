@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ContractAI — Contract Intelligence Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f172a; --bg-card: #1e293b; --bg-input: #0f172a;
+      --border: #334155; --accent: #6366f1; --accent-hover: #818cf8;
+      --text: #f1f5f9; --text-muted: #94a3b8; --green: #34d399; --red: #f87171;
+    }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* NAV */
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; border-bottom: 1px solid var(--border); }
+    .logo { display: flex; align-items: center; gap: 10px; font-size: 1.25rem; font-weight: 700; color: var(--text); text-decoration: none; }
+    .logo svg { color: var(--accent); }
+    .badge { background: var(--accent); color: #fff; font-size: 0.6rem; padding: 2px 7px; border-radius: 99px; font-weight: 700; letter-spacing: .05em; }
+
+    /* HERO */
+    .hero { flex: 1; display: flex; align-items: center; justify-content: center; gap: 80px; padding: 60px 48px; max-width: 1200px; margin: 0 auto; width: 100%; }
+    .hero-left { flex: 1; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(99,102,241,.15); border: 1px solid rgba(99,102,241,.3); color: var(--accent-hover); font-size: .75rem; font-weight: 600; padding: 5px 12px; border-radius: 99px; margin-bottom: 24px; }
+    .hero-title { font-size: 3rem; font-weight: 800; line-height: 1.15; margin-bottom: 20px; }
+    .hero-title span { background: linear-gradient(135deg, #818cf8, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-sub { color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; max-width: 460px; margin-bottom: 36px; }
+    .features { display: flex; flex-direction: column; gap: 12px; }
+    .feature { display: flex; align-items: center; gap: 10px; color: var(--text-muted); font-size: .9rem; }
+    .feature svg { color: var(--green); flex-shrink: 0; }
+
+    /* AUTH CARD */
+    .auth-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 36px; width: 400px; flex-shrink: 0; }
+    .tabs { display: flex; gap: 4px; background: var(--bg); border-radius: 10px; padding: 4px; margin-bottom: 28px; }
+    .tab { flex: 1; padding: 9px; border: none; background: transparent; color: var(--text-muted); font-size: .875rem; font-weight: 500; border-radius: 7px; cursor: pointer; transition: all .2s; font-family: inherit; }
+    .tab.active { background: var(--bg-card); color: var(--text); box-shadow: 0 1px 4px rgba(0,0,0,.4); }
+    .form-group { margin-bottom: 16px; }
+    label { display: block; font-size: .8rem; font-weight: 500; color: var(--text-muted); margin-bottom: 6px; }
+    input { width: 100%; background: var(--bg-input); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; color: var(--text); font-size: .9rem; font-family: inherit; outline: none; transition: border .2s; }
+    input:focus { border-color: var(--accent); }
+    input::placeholder { color: #475569; }
+    .btn-primary { width: 100%; background: var(--accent); color: #fff; border: none; border-radius: 8px; padding: 11px; font-size: .925rem; font-weight: 600; cursor: pointer; font-family: inherit; transition: background .2s; margin-top: 8px; }
+    .btn-primary:hover { background: var(--accent-hover); }
+    .btn-primary:disabled { opacity: .6; cursor: not-allowed; }
+    .error-msg { background: rgba(248,113,113,.1); border: 1px solid rgba(248,113,113,.3); color: var(--red); font-size: .8rem; padding: 10px 12px; border-radius: 8px; margin-top: 12px; display: none; }
+    .divider { text-align: center; color: var(--text-muted); font-size: .75rem; margin: 16px 0; position: relative; }
+    .divider::before, .divider::after { content: ''; position: absolute; top: 50%; width: 42%; height: 1px; background: var(--border); }
+    .divider::before { left: 0; } .divider::after { right: 0; }
+
+    /* FOOTER */
+    footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: .8rem; border-top: 1px solid var(--border); }
+
+    @media (max-width: 900px) {
+      .hero { flex-direction: column; gap: 40px; padding: 40px 24px; }
+      .hero-title { font-size: 2rem; }
+      .auth-card { width: 100%; }
+      nav { padding: 16px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    ContractAI <span class="badge">ENTERPRISE</span>
+  </a>
+  <span style="color:var(--text-muted);font-size:.85rem;">Analisi legale AI-powered per le PMI italiane</span>
+</nav>
+
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+      Powered by AI · Regolo + Claude
+    </div>
+    <h1 class="hero-title">Analizza i tuoi contratti<br>con <span>intelligenza artificiale</span></h1>
+    <p class="hero-sub">Carica PDF o DOCX e ottieni in secondi un'analisi legale professionale: clausole rischiose, scadenze, SLA e azioni consigliate.</p>
+    <div class="features">
+      <div class="feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Estrazione automatica di clausole critiche</div>
+      <div class="feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Risk score e analisi finanziaria del portfolio</div>
+      <div class="feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Chat AI con citazioni dirette al documento</div>
+      <div class="feature"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Grafici interattivi e integrazione Google Calendar</div>
+    </div>
+  </div>
+
+  <div class="auth-card">
+    <div class="tabs">
+      <button class="tab active" id="tab-login" onclick="showTab('login')">Accedi</button>
+      <button class="tab" id="tab-register" onclick="showTab('register')">Registrati</button>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <form id="form-login" onsubmit="handleLogin(event)">
+      <div class="form-group">
+        <label>Email aziendale</label>
+        <input type="email" id="login-email" placeholder="nome@azienda.it" required />
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="login-password" placeholder="••••••••" required />
+      </div>
+      <button class="btn-primary" type="submit" id="btn-login">Accedi</button>
+      <div class="error-msg" id="login-error"></div>
+    </form>
+
+    <!-- REGISTER FORM -->
+    <form id="form-register" style="display:none" onsubmit="handleRegister(event)">
+      <div class="form-group">
+        <label>Nome azienda</label>
+        <input type="text" id="reg-company" placeholder="TechVenture Italia Srl" required />
+      </div>
+      <div class="form-group">
+        <label>Email aziendale</label>
+        <input type="email" id="reg-email" placeholder="nome@azienda.it" required />
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="reg-password" placeholder="Min. 8 caratteri" required minlength="8" />
+      </div>
+      <button class="btn-primary" type="submit" id="btn-register">Crea account</button>
+      <div class="error-msg" id="register-error"></div>
+    </form>
+
+    <div class="divider">oppure continua senza account</div>
+    <button class="btn-primary" style="background:transparent;border:1px solid var(--border);color:var(--text-muted);" onclick="guestLogin()">Accesso ospite (demo)</button>
+  </div>
+</div>
+
+<footer>© 2026 ContractAI · Analisi legale AI per PMI italiane · Powered by Regolo AI</footer>
+
+<script>
+  const API = 'http://localhost:8000';
+
+  // If already logged in, redirect to app
+  if (localStorage.getItem('cai_token')) {
+    window.location.href = '/';
+  }
+
+  function showTab(tab) {
+    document.getElementById('form-login').style.display    = tab === 'login'    ? '' : 'none';
+    document.getElementById('form-register').style.display = tab === 'register' ? '' : 'none';
+    document.getElementById('tab-login').classList.toggle('active',    tab === 'login');
+    document.getElementById('tab-register').classList.toggle('active', tab === 'register');
+  }
+
+  async function handleLogin(e) {
+    e.preventDefault();
+    const btn = document.getElementById('btn-login');
+    const err = document.getElementById('login-error');
+    btn.disabled = true; btn.textContent = 'Accesso in corso...';
+    err.style.display = 'none';
+    try {
+      const res = await fetch(`${API}/api/auth/login`, {
+        method: 'POST', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ email: document.getElementById('login-email').value, password: document.getElementById('login-password').value })
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.detail || 'Errore login');
+      saveAndRedirect(data);
+    } catch(ex) {
+      err.textContent = ex.message; err.style.display = 'block';
+    } finally { btn.disabled = false; btn.textContent = 'Accedi'; }
+  }
+
+  async function handleRegister(e) {
+    e.preventDefault();
+    const btn = document.getElementById('btn-register');
+    const err = document.getElementById('register-error');
+    btn.disabled = true; btn.textContent = 'Creazione account...';
+    err.style.display = 'none';
+    try {
+      const res = await fetch(`${API}/api/auth/register`, {
+        method: 'POST', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({ email: document.getElementById('reg-email').value, password: document.getElementById('reg-password').value, company: document.getElementById('reg-company').value })
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.detail || 'Errore registrazione');
+      saveAndRedirect(data);
+    } catch(ex) {
+      err.textContent = ex.message; err.style.display = 'block';
+    } finally { btn.disabled = false; btn.textContent = 'Crea account'; }
+  }
+
+  function guestLogin() {
+    localStorage.setItem('cai_token',   'guest');
+    localStorage.setItem('cai_user_id', 'guest-' + Math.random().toString(36).slice(2));
+    localStorage.setItem('cai_company', 'TechVenture Italia Srl');
+    localStorage.setItem('cai_email',   'guest@demo.it');
+    window.location.href = '/';
+  }
+
+  function saveAndRedirect(data) {
+    localStorage.setItem('cai_token',   data.token);
+    localStorage.setItem('cai_user_id', data.user_id);
+    localStorage.setItem('cai_company', data.company || '');
+    localStorage.setItem('cai_email',   data.email || '');
+    window.location.href = '/';
+  }
+</script>
+</body>
+</html>
