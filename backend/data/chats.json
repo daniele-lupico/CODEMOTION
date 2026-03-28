@@ -1,0 +1,118 @@
+{
+  "guest-28hqjsm1xjv": [
+    {
+      "id": "08754310-dbb5-4bc9-9d2c-992afa55f822",
+      "title": "dgdfghfg",
+      "messages": [
+        {
+          "role": "user",
+          "content": "dgdfghfg"
+        },
+        {
+          "role": "ai",
+          "content": "La tua richiesta non è chiara. Puoi fornire una domanda specifica sui contratti o un'analisi da effettuare?"
+        }
+      ]
+    },
+    {
+      "id": "833bee4f-bd17-4c84-b6c0-5f2f04f3b75e",
+      "title": "dghdhdfhdf",
+      "messages": [
+        {
+          "role": "user",
+          "content": "dghdhdfhdf"
+        },
+        {
+          "role": "ai",
+          "content": "La tua richiesta non è chiara. Puoi fornire una domanda specifica sui contratti o un'analisi richiesta? Ad esempio: 'Quali sono i contratti con rischio critico?', 'Mostra il fatturato annuo per cliente', 'Quali contratti scadono entro 30 giorni?'"
+        }
+      ]
+    },
+    {
+      "id": "887bc8cc-0e46-4dcc-a649-4a98167df2cb",
+      "title": "ghfhf",
+      "messages": [
+        {
+          "role": "user",
+          "content": "ghfhf"
+        },
+        {
+          "role": "ai",
+          "content": "Il tuo input non è chiaro. Puoi ripetere la domanda o fornire maggiori dettagli?"
+        }
+      ]
+    }
+  ],
+  "guest-hvntct8dnn": [
+    {
+      "id": "1dd11957-db36-4185-bb4a-5926cce2b4e6",
+      "title": "Se nel mese di ottobre 2025 il cliente Hej elabo…",
+      "messages": [
+        {
+          "role": "user",
+          "content": "вітаю"
+        },
+        {
+          "role": "ai",
+          "content": "Вітаю! Come posso aiutarti con l'analisi dei contratti aziendali? Posso fornirti riepiloghi, identificare rischi, scadenze critiche o generare grafici sul portafoglio contrattuale."
+        },
+        {
+          "role": "user",
+          "content": "Qual è il tetto massimo cumulato dei Crediti di Servizio che il cliente Hej può ottenere in un singolo trimestre?"
+        },
+        {
+          "role": "ai",
+          "content": "Il tetto massimo cumulato dei Crediti di Servizio per il trimestre è del **10% del Canone di Licenza trimestrale**. La clausola specifica: «Penale per downtime inferiore al 98% trimestrale: credito di servizio pari al 7% del Canone di Licenza trimestrale (€5.000), con tetto massimo del 10% del canone trimestrale cumulato con altri SLA» [Fonte: CTR-042 - Clausola SLA Penalty].\n\nCon un canone trimestrale fisso di €5.000, il tetto massimo ammonta a:\n10% × €5.000 = **€500**."
+        },
+        {
+          "role": "user",
+          "content": "Il cliente Hej può caricare referti medici sulla piattaforma Freader?"
+        },
+        {
+          "role": "ai",
+          "content": "No, il cliente Hej non può caricare referti medici sulla piattaforma Freader.\n\nI referti medici contengono dati sanitari, che rientrano esplicitamente tra i **dati sensibili** ai sensi degli articoli 9 e 10 del GDPR. La clausola **'Dati Vietati'** [Fonte: CTR-042 - Clausola 'Dati Vietati'] vieta espressamente il caricamento di tali dati, salvo accordo scritto e DPA specifico, che non è menzionato nel contratto attuale."
+        },
+        {
+          "role": "user",
+          "content": "Se nel mese di ottobre 2025 il cliente Hej elabora 12.500 pagine, a quanto ammonterà il suo Corrispettivo Variabile per quel mese? Mostra il calcolo."
+        },
+        {
+          "role": "ai",
+          "content": "Per il contratto CTR-042 con cliente **Hej**, il corrispettivo variabile è calcolato come segue [Fonte: CTR-042 - Hej]:\n\n- Canone fisso trimestrale: €5.000 (€20.000 annui)\n- Corrispettivo variabile: €0.20 per pagina oltre la franchigia di 1.000 pagine/mese\n\nNel mese di ottobre 2025, Hej elabora **12.500 pagine**.\n\nFranchigia: 1.000 pagine/mese → pagine soggette a corrispettivo variabile = 12.500 − 1.000 = **11.500 pagine**\n\nCorrispettivo variabile = 11.500 × €0.20 = **€2.300**\n\nQuindi, il corrispettivo variabile per ottobre 2025 ammonta a **€2.300**."
+        }
+      ]
+    }
+  ],
+  "guest-ogsbbxkebiq": [
+    {
+      "id": "5d063c1c-efb4-4de2-87fd-4c4bd58ab214",
+      "title": "grh5hh",
+      "messages": [
+        {
+          "role": "user",
+          "content": "grh5hh"
+        },
+        {
+          "role": "ai",
+          "content": "La tua richiesta 'grh5hh' non è chiara. Potresti fornire un dettaglio in più? Ad esempio: 'Quali sono i contratti in scadenza entro 30 giorni?' o 'Quali contratti hanno rischio critico?'"
+        }
+      ],
+      "folder_id": "5413e59f-3504-4a7b-9004-97bf9d1e13e8"
+    },
+    {
+      "id": "1a80d9be-0434-4f56-ac9d-333f939a45a7",
+      "title": "парапр",
+      "messages": [
+        {
+          "role": "user",
+          "content": "парапр"
+        },
+        {
+          "role": "ai",
+          "content": "Il termine 'парапр' non è riconoscibile come nome di cliente, contratto o clausola nel database fornito. Potrebbe trattarsi di un errore di trascrizione, di un nome abbreviato o di un termine in lingua straniera (es. russo: 'парапр' non ha significato noto in italiano o inglese).\n\nTi prego di verificare l'input o fornire maggiori dettagli (es. nome completo cliente, ID contratto, clausola o argomento specifico)."
+        }
+      ],
+      "folder_id": "5413e59f-3504-4a7b-9004-97bf9d1e13e8"
+    }
+  ]
+}
