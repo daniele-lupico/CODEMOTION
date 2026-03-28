@@ -4,7 +4,7 @@ import os
 # Change into the backend directory so uvicorn can find main:app
 # and all relative imports work correctly in both the main process
 # and reload worker subprocesses.
-_backend = os.path.join(os.path.dirname(os.path.abspath(__file__)), "CODEMOTION", "backend")
+_backend = os.path.join(os.path.dirname(os.path.abspath(__file__)), "backend")
 os.chdir(_backend)
 sys.path.insert(0, _backend)
 

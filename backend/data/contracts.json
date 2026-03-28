@@ -1,8 +1,8 @@
 {
   "company": "TechVenture Italia Srl",
   "extraction_date": "2026-03-28",
-  "total_contracts": 16,
-  "total_revenue": 3427360,
+  "total_contracts": 17,
+  "total_revenue": 3455360,
   "contracts": [
     {
       "id": "CTR-001",
@@ -742,16 +742,75 @@
       ],
       "next_step_action": "Verificare con il cliente la fattibilità di una clausola di recesso anticipato e implementare procedure di backup esterno per i dati critici.",
       "notes": "Canone fisso trimestrale di €7.000 (€28.000 annui), con corrispettivo variabile a consumo non incluso nel valore annuo. Nessun sconto applicato, al di sotto della scontistica standard del 12%."
+    },
+    {
+      "id": "CTR-042",
+      "client": "Dobrý den",
+      "client_sector": "Consulting",
+      "type": "SaaS Enterprise",
+      "product": "Freader",
+      "category": "Software",
+      "value_annual": 28000,
+      "total_value": 56000,
+      "currency": "EUR",
+      "start_date": "2024-04-04",
+      "end_date": "2026-04-04",
+      "duration_months": 24,
+      "auto_renewal": true,
+      "discount_percent": 0,
+      "standard_discount": 12,
+      "payment_terms_days": 30,
+      "status": "active",
+      "risk_score": 5,
+      "sla": {
+        "uptime": "99.5%",
+        "response_time_hours": 4,
+        "penalty_percent": 5
+      },
+      "clauses": [
+        {
+          "type": "Rinnovo Automatico",
+          "description": "Il contratto si rinnova automaticamente per periodi di 24 mesi salvo disdetta con preavviso scritto di almeno 30 giorni (art. 23.2).",
+          "risk_level": "medium",
+          "risk_area": "operational"
+        },
+        {
+          "type": "Data Retention Risk",
+          "description": "I documenti e i dati di output sono conservati solo 20 giorni dalla data di elaborazione e poi cancellati in via irreversibile (art. 10.1-10.2).",
+          "risk_level": "high",
+          "risk_area": "operational"
+        },
+        {
+          "type": "Limitazione Responsabilità",
+          "description": "La responsabilità complessiva del fornitore non può eccedere il 20% dei Canoni di Licenza corrisposti nell’anno solare precedente (art. 22.3).",
+          "risk_level": "medium",
+          "risk_area": "financial"
+        },
+        {
+          "type": "Dati Vietati",
+          "description": "Il Cliente è tenuto a non caricare dati sensibili ai sensi degli artt. 9 e 10 GDPR, salvo accordo scritto e DPA (art. 15.1-15.2).",
+          "risk_level": "low",
+          "risk_area": "legal"
+        },
+        {
+          "type": "Verifica Output AI",
+          "description": "Il Cliente rimane esclusivamente responsabile della verifica e validazione dei dati di output AI generativa prima dell’uso in processi decisionali, legali, contabili, ecc. (art. 16.2).",
+          "risk_level": "medium",
+          "risk_area": "operational"
+        }
+      ],
+      "next_step_action": "Verificare la fattibilità di un DPA completo e valutare l’impatto operativo della retention di soli 20 giorni sui flussi di archiviazione interna.",
+      "notes": "Canone fisso trimestrale di €7.000 (€28.000 annui), con corrispettivo variabile a consumo (franchigia 1.000 pagine/mese, poi €0.15/€0.12/€0.10 a seconda dello scaglione). Il valore totale contrattuale è €56.000 per 24 mesi, escluse spese variabili."
     }
   ],
   "revenue_by_year": {
-    "2024": 1328000,
+    "2024": 1356000,
     "2025": 1868000,
     "2026": 90000,
     "2022": 141360
   },
   "revenue_by_category": {
-    "Software": 1407360,
+    "Software": 1435360,
     "Hardware": 280000,
     "Consulting": 600000,
     "Services": 670000,
@@ -760,6 +819,6 @@
   },
   "last_uploaded": {
     "id": "CTR-042",
-    "client": "Hej"
+    "client": "Dobrý den"
   }
 }

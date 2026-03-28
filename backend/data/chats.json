@@ -85,6 +85,20 @@
   ],
   "guest-ogsbbxkebiq": [
     {
+      "id": "bd25dd92-559f-479d-9fe0-8f01b60d6ed3",
+      "title": "gfghfgh",
+      "messages": [
+        {
+          "role": "user",
+          "content": "gfghfgh"
+        },
+        {
+          "role": "ai",
+          "content": "La tua richiesta non è chiara. Puoi specificare cosa desideri analizzare o visualizzare riguardo ai contratti?"
+        }
+      ]
+    },
+    {
       "id": "5d063c1c-efb4-4de2-87fd-4c4bd58ab214",
       "title": "grh5hh",
       "messages": [
@@ -113,6 +127,22 @@
         }
       ],
       "folder_id": "5413e59f-3504-4a7b-9004-97bf9d1e13e8"
+    }
+  ],
+  "guest-nn6atk1fhc": [
+    {
+      "id": "27c31bb7-0bc5-4da9-9a8c-9fee68d72224",
+      "title": "",
+      "messages": [
+        {
+          "role": "user",
+          "content": ""
+        },
+        {
+          "role": "ai",
+          "content": "Il contratto CTR-042 con Dobrý den ha un valore annuale di €28.000, è attivo fino al 2026-04-04 e presenta un risk score complessivo di 5/10. Tra le clausole rilevanti spiccano:\n\n- Un **rischio alto operativo** legato alla conservazione dei dati: i documenti vengono cancellati irreversibilmente entro 20 giorni [Fonte: CTR-042 | \"I documenti e i dati di output sono conservati solo 20 giorni dalla data di elaborazione e poi cancellati in via irreversibile (art. 10.1-10.2).\"]\n\n- Una **limitazione di responsabilità** che ne copre solo il 20% dei canoni pagati nell’anno precedente [Fonte: CTR-042 | \"La responsabilità complessiva del fornitore non può eccedere il 20% dei Canoni di Licenza corrisposti nell’anno solare precedente (art. 22.3).\"]\n\n- Un **rinnovo automatico biennale** con disdetta a 30 giorni [Fonte: CTR-042 | \"Il contratto si rinnova automaticamente per periodi di 24 mesi salvo disdetta con preavviso scritto di almeno 30 giorni (art. 23.2).\"]\n\n- Un **rischio medio operativo** sull’uso dei dati AI generati, poiché spetta al Cliente la verifica e validazione prima dell’uso in contesti critici [Fonte: CTR-042 | \"Il Cliente rimane esclusivamente responsabile della verifica e validazione dei dati di output AI generativa prima dell’uso in processi decisionali, legali, contabili, ecc. (art. 16.2).\"]\n\nIl contratto prevede un canone fisso trimestrale di €7.000 (€28.000 annui) più un corrispettivo variabile a consumo (franchigia 1.000 pagine/mese, poi €0.15/€0.12/€0.10 a scaglione). Il valore totale stimato è €56.000 per 24 mesi, escluse spese variabili."
+        }
+      ]
     }
   ]
 }
