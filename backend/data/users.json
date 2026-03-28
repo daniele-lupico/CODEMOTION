@@ -4,5 +4,11 @@
     "password_hash": "9997cb42435ce2537fe58bbe4658dd28fb3e0dd407d2ee6efa09aa573f2c7fe4",
     "company": "hgjhgh",
     "token": "7b5dcfc0-2c78-4eb1-91af-7a11a79767ce"
+  },
+  "test@test.it": {
+    "user_id": "8adc852b-5e84-4e68-9291-a39c80cfa466",
+    "password_hash": "37268335dd6931045bdcdf92623ff819a64244b53d0e746d438797349d4da578",
+    "company": "Test Co",
+    "token": "915ed7f8-2a4a-4d50-b80e-a210f7154bb3"
   }
 }
